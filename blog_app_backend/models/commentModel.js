@@ -11,11 +11,11 @@ const commentSchema = new mongoose.Schema({
     },
     user:{
         type: String,
-        required: true,
+        required: [true,"user required"],
     },
-    user:{ 
-        body: String,
-        required: true,
+    body:{ 
+        type: String,
+        required: [true,"body required"],
     }
 });
 

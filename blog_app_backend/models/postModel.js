@@ -7,11 +7,11 @@ const mongoose = require('mongoose');
 const postSchema = new mongoose.Schema({
         title: {
             type: String,
-            required: true
+            required: [true,"title required"]
         },
         body: {
             type: String,
-            required: true
+            required: [true,"body required"]
         },
         likes:[{
             type: mongoose.Schema.Types.ObjectId,

@@ -1,6 +1,5 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt")
 const User = require("../models/user")
-const jwt = require("jsonwebtoken")
 
 exports.signup = async (req,res) => {
     try {
@@ -13,9 +12,8 @@ exports.signup = async (req,res) => {
         let hashedPassword;
         try {
              hashedPassword = await bcrypt.hash(password, 10);
+             console.log("Password hashed sucessfully")
         }
-        
-           
         catch (error) {
             res.status(500).json({ message: "passward did not hashed  error" })}
 
